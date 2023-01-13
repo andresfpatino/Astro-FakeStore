@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon'
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+
+---
+
+<style lang="scss">
+    .header{
+        @apply bg-primary py-6;
+        .logo{
+            a{
+                @apply flex items-center gap-3 w-max;
+            }
+            &_label{
+                @apply font-Playfair font-bold;
+            }
+        }
+        &_navigation{
+            @apply flex gap-x-3;
+            a{
+                @apply uppercase hover:text-secondary hover:font-normal;
+                &.active{
+                    @apply text-secondary font-normal;
+                }
+            }
+        }
+    }
+</style>
+
+
+<header class="header">
+    <div class="container flex justify-between">
+        <div class="logo">
+            <a href="/" >
+                <Icon class="logo_icon" name="mdi:shopping-outline" />
+                <p class="logo_label">Fake Store</p>
+            </a>
+        </div>
+        <nav class="header_navigation">
+            <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
+            <a class={currentPath === "portfolio" ? "active" : ""} href="/products">Products</a>
+            <a class={currentPath === "posts" ? "active" : ""} href="/blog">Blog</a>
+            <a class={currentPath === "about" ? "active" : ""} href="/contact">Contact</a>
+        </nav>
+    </div>
+</header>

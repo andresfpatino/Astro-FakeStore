@@ -1,0 +1,8 @@
+body{
+    @apply bg-primary font-Raleway text-light font-light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    hyphens: none;
+    word-break: keep-all;
+    word-wrap: normal;
+}
