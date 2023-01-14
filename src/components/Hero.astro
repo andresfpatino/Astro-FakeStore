@@ -1,0 +1,22 @@
+---
+import '../css/Hero.css';
+
+interface Props{
+    title: string,
+    content: string,
+    buttonLabel: string,
+    buttonLink?: string
+}
+
+const { title, content, buttonLabel, buttonLink = "#" } = Astro.props
+
+---
+
+<div class="Hero">
+    <div class="container">
+        <h1>{title}</h1>
+        <p><>{content}</></p>
+        <!-- <slot name="content"></slot> -->
+        <a href={buttonLink} class="btn btn-fill btn--large">{buttonLabel}</a>
+    </div>
+</div>

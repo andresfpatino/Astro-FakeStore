@@ -1,15 +1,27 @@
 ---
 import { Icon } from 'astro-icon'
 
-import '../css/base.css';
-
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
-
 ---
 
+<div class="topBar">
+    <div class="container flex items-center flex-wrap justify-between py-3">
+        <div class="promo">
+            <p>Hey there! 👋 Welcome!!!. Get 15% OFF Your 1st Purchase  </p>
+        </div>
+        <nav class="header_actions">
+            <a class="cart" href="#">
+                <Icon class="cart_icon" name="ph:bag-simple"/>
+            </a>
+            <a class="btn btn-fill" href="#">Sign Up</a>
+            <a class="btn" href="#">Sign In</a>
+        </nav>
+    </div>
+</div>
+
 <header class="header">
-    <div class="container flex justify-between">       
+    <div class="container flex flex-wrap justify-between">       
         <a class="logo" href="/" >
             <Icon class="logo_icon" name="mdi:shopping-outline" />
             <p class="logo_label">Fake Store</p>
@@ -21,5 +33,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
             <a class={currentPath === "blog" ? "active" : ""} href="/blog">Blog</a>
             <a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact</a>
         </nav>
+
     </div>
 </header>

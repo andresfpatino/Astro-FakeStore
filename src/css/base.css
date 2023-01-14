@@ -2,29 +2,54 @@ body{
     @apply bg-primary font-Raleway text-light font-normal antialiased break-keep;
 }
 
-.header{
-    @apply bg-primary py-6;
-    .logo{
-        @apply flex flex-wrap items-center gap-2 flex-1;
-        &_icon{
-            @apply w-8 text-light;
-        }
-        &_label{
-            @apply text-light uppercase font-extrabold text-xl;
+a{
+    @apply transition duration-500 ease-in-out;
+}
+
+.btn{
+    @apply inline-block leading-none border border-secondary rounded-md px-4 py-1 font-semibold hover:bg-secondaryDark hover:border-secondaryDark hover:text-primary;
+    &-fill{
+        @apply bg-secondary text-primary;
+    }
+    &--large{
+        @apply py-[18px] px-10 text-lg;
+    }
+}
+
+.topBar{
+    @apply bg-secondaryDark;
+    .promo{
+        @apply flex gap-x-2;
+        .gift-icon{
+            @apply w-5;
         }
     }
+}
+
+.header{
+    @apply bg-primary py-5;
+
+    .logo{
+        @apply flex flex-wrap items-center gap-3 hover:text-secondary;
+        &_icon{
+            @apply w-8;
+        }
+        &_label{
+            @apply uppercase font-extrabold text-2xl;
+        }
+    }
+
     &_navigation{
-        @apply flex flex-wrap gap-x-3 relative;
+        @apply flex flex-wrap items-center gap-x-5 relative;
         a{
-            @apply uppercase transition duration-500 ease-in-out relative;
+            @apply uppercase relative;
             &.active{
-                @apply text-secondary;
                 &:after{
                     background-size: 100% 100%;
                 }
             }
             &:after{
-                @apply content-[''] block absolute bottom-0 left-0 w-full h-full bg-no-repeat;
+                @apply content-[''] block absolute -bottom-[4px] left-0 w-full h-full bg-no-repeat;
                 background-image: linear-gradient(180deg,transparent 90%, #95abf4 0);
                 background-size: 0 100%;
                 transition: background-size 500ms ease;         
@@ -34,6 +59,16 @@ body{
                 &:after{
                     background-size: 100% 100%;
                 }
+            }
+        }
+    }
+
+    &_actions{
+        @apply flex flex-wrap items-center gap-x-3;
+        .cart{
+            @apply flex gap-x-1;
+            &_icon{
+                @apply w-5;
             }
         }
     }
