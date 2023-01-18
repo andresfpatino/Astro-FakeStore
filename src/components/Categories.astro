@@ -1,0 +1,27 @@
+---
+import '../css/Categories.css';
+import { categories } from "../data/api.json";
+
+interface Props { 
+    title: string,
+}
+
+const { title } = Astro.props;
+---
+
+<div class="categories">
+    <div class="title">
+        <hr> <h2> {title} </h2> <hr>
+    </div>
+
+    { 
+        categories.map(category => (
+            <div class="post">
+                <h3>{category.name}</h3>
+                <img src="" alt="">
+            </div>
+            
+        ))
+    }
+
+</div>
