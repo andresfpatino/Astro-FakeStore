@@ -73,3 +73,13 @@ a{
         }
     }
 }
+
+.title{
+    @apply flex justify-center items-center mb-9;
+    hr{
+        @apply flex-1 border-secondary;
+    }
+    h2{
+        @apply mx-3 uppercase font-extrabold tracking-wider;
+    }
+}

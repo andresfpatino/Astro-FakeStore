@@ -1,0 +1,6 @@
+.categories{
+    @apply py-10;
+    &_wrap{
+        @apply grid grid-cols-3 gap-6;
+    }
+}
