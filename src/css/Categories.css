@@ -1,6 +1,24 @@
 .categories{
-    @apply py-10;
+    @apply py-20;
     &_wrap{
-        @apply grid grid-cols-3 gap-6;
+        @apply w-full grid grid-cols-3 gap-6;
+
+        .category{
+            @apply relative rounded-md overflow-hidden cursor-pointer flex justify-center items-center;
+            &:before{
+                @apply content-[""] w-full h-full absolute top-0 left-0 bg-gradient-to-br from-secondary/90 to-secondaryDark/90 opacity-0 duration-300 ease-in-out transition-all ;
+            }
+            h3{
+                @apply font-extrabold font-Playfair absolute opacity-0 duration-700 ease-in-out transition-all text-lg;
+            }
+            &:hover{
+                &:before{
+                    @apply opacity-100;
+                }
+                h3{
+                    @apply opacity-100 text-3xl text-primary;
+                }
+            }
+        }
     }
 }

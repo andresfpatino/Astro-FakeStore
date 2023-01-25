@@ -1,7 +1,6 @@
 ---
 import '../css/Categories.css';
 import { categories } from "../data/api.json";
-import { Image, Picture } from '@astrojs/image/components';
 
 interface Props { 
     title: string,
@@ -19,10 +18,9 @@ const { title } = Astro.props;
             { 
                 categories.map(category => (
                     <div class="category">
-                        <Image src={category.image} width={100} height={100} alt={category.name} />
                         <h3>{category.name}</h3>
-                    </div>
-                    
+                        <img src={category.image} alt={category.name}/>
+                    </div>                    
                 ))
             }
         </div>

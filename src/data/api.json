@@ -24,11 +24,6 @@
             "id": 5,
             "name": "Others",
             "image": "https://api.lorem.space/image?w=640&h=480&r=4933"
-        },
-        {
-            "id": 6,
-            "name": "Book",
-            "image": "https://api.lorem.space/book?w=640&h=480&r=4933"
         }
     ],
     "products": [
@@ -42,15 +37,9 @@
               "https://api.lorem.space/image/shoes?w=640&h=480&r=2483",
               "https://api.lorem.space/image/shoes?w=640&h=480&r=9020"
             ],
-            "creationAt": "2023-01-17T02:58:03.000Z",
-            "updatedAt": "2023-01-17T02:58:03.000Z",
             "category": {
-              "id": 1,
-              "name": "Shoes",
-              "image": "https://api.lorem.space/image/shoes?w=640&h=480&r=9199",
-              "creationAt": "2023-01-17T02:58:03.000Z",
-              "updatedAt": "2023-01-17T02:58:03.000Z"
+              "id": 1
             }
-          }
+        }
     ]
 }
