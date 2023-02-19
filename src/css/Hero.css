@@ -1,9 +1,9 @@
 .Hero{
-    @apply bg-primarySlight py-32 flex flex-col justify-center text-center;
+    @apply bg-primarySlight py-16 md:py-24 lg:py-32 flex flex-col justify-center text-center;
     h1{
-        @apply font-Playfair text-8xl font-extrabold;
+        @apply font-Playfair text-4xl md:text-6xl lg:text-8xl font-extrabold;
     }
     p{
-        @apply max-w-3xl text-2xl my-10 mx-auto;
+        @apply lg:max-w-3xl text-lg md:text-2xl my-10 mx-auto;
     }
 }

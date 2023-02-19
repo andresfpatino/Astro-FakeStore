@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Categories from '../components/Categories.astro';
+import BestSeller from '../components/BestSeller';
+import Product from '../components/Product.astro';
+
 ---
 
 <Layout title="Just For Fun Practice">
@@ -12,8 +15,10 @@ import Categories from '../components/Categories.astro';
       buttonLabel="View Collections"
    />
 
-   <Categories
-      title="Shop by Categories"
-   />
+   <Categories title="Shop by Categories" />
+
+   <BestSeller title="DevFest con React" client:visible />
+
+   <Product></Product>
    
 </Layout>

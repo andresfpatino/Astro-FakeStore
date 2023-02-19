@@ -33,6 +33,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
             <a class={currentPath === "blog" ? "active" : ""} href="/blog">Blog</a>
             <a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact</a>
         </nav>
-
+        <Icon class="toggle-menu" name="mdi:menu" data-target="header_navigation"/>
     </div>
 </header>

@@ -25,21 +25,5 @@
             "name": "Others",
             "image": "https://api.lorem.space/image?w=640&h=480&r=4933"
         }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "title": "Handcrafted Concrete Cheese",
-            "price": 348,
-            "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-            "images": [
-              "https://api.lorem.space/image/shoes?w=640&h=480&r=1256",
-              "https://api.lorem.space/image/shoes?w=640&h=480&r=2483",
-              "https://api.lorem.space/image/shoes?w=640&h=480&r=9020"
-            ],
-            "category": {
-              "id": 1
-            }
-        }
     ]
 }

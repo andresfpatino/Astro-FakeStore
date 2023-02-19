@@ -6,6 +6,10 @@ a{
     @apply transition duration-500 ease-in-out;
 }
 
+.container {
+    @apply px-4 md:px-0;
+}
+
 .btn{
     @apply inline-block leading-none border border-secondary rounded-md px-4 py-1 font-semibold hover:bg-secondaryDark hover:border-secondaryDark hover:text-primary;
     &-fill{
@@ -17,9 +21,12 @@ a{
 }
 
 .topBar{
-    @apply bg-secondaryDark;
+    @apply bg-secondaryDark transition-all duration-500 ease-in-out;
+    &.isSticky{
+        @apply sticky top-0 z-[1] w-full;
+    }
     .promo{
-        @apply flex gap-x-2;
+        @apply flex gap-x-2 text-center;
         .gift-icon{
             @apply w-5;
         }
@@ -30,7 +37,7 @@ a{
     @apply bg-primary py-5;
 
     .logo{
-        @apply flex flex-wrap items-center gap-3 hover:text-secondary;
+        @apply flex flex-wrap items-center gap-3 hover:text-secondary order-1 md:order-none;
         &_icon{
             @apply w-8;
         }
@@ -40,9 +47,9 @@ a{
     }
 
     &_navigation{
-        @apply flex flex-wrap items-center gap-x-5 relative;
+        @apply hidden md:flex flex-wrap items-center gap-x-5 relative flex-col md:flex-row order-3 md:order-none w-full md:w-max pt-5 mt-4 md:mt-0 md:pt-0 bg-primarySlight md:bg-transparent;
         a{
-            @apply uppercase relative;
+            @apply uppercase relative mb-5 md:mb-0;
             &.active{
                 &:after{
                     background-size: 100% 100%;
@@ -64,13 +71,17 @@ a{
     }
 
     &_actions{
-        @apply flex flex-wrap items-center gap-x-3;
+        @apply hidden md:flex flex-wrap items-center gap-x-3;
         .cart{
             @apply flex gap-x-1;
             &_icon{
                 @apply w-5;
             }
         }
+    }
+
+    .toggle-menu{
+        @apply order-2 w-9 md:hidden;
     }
 }
 
