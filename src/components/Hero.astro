@@ -4,12 +4,11 @@ import '../css/Hero.css';
 interface Props{
     title: string,
     subtitle?: string,
-    content: string,
     buttonLabel: string,
     buttonLink?: string
 }
 
-const { title, subtitle, content, buttonLabel, buttonLink = "#" } = Astro.props
+const { title, subtitle, buttonLabel, buttonLink = "#" } = Astro.props
 
 ---
 
@@ -17,7 +16,7 @@ const { title, subtitle, content, buttonLabel, buttonLink = "#" } = Astro.props
     <div class="container">
         <h3>{subtitle}</h3>
         <h1>{title}</h1>
-        <p> <Fragment set:html={content} /> </p>
+        <slot/>
         <a href={buttonLink} class="btn btn-fill btn--large">{buttonLabel}</a>
     </div>
 </div>
